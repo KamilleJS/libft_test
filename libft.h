@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/20 21:23:19 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 14:48:40 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 char 	*ft_strstr(char *str, char *to_find);
 char	*ft_tolower(char *str);
-char	*ft_strupcase(char *str);
+char	*ft_toupper(char *str);
+void    ft_bzero(void *s, size_t n);
+void    *ft_memset(void *str, int c, size_t len);
 
 #endif

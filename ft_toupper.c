@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:55:33 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/20 12:19:53 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 14:48:35 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strupcase(char *str)
+char	*ft_toupper(char *str)
 {
 	int i;
 
