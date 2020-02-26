@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 15:51:20 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/19 16:07:44 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 14:51:32 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**concatenate strings
+*/
 
 char	*ft_strcat(char *dest, char *src)
 {

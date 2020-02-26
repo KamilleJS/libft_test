@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:46:11 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 14:46:10 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/26 14:45:56 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/26 14:49:04 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**outputs a character or word to a file descriptor
+**output an integer to a file descriptor
 */
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	write(fd, &c, 1);
+	long int lnb;
+
+	lnb = nb;
+	if (lnb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		lnb = lnb * -1;
+	}
+	if (lnb >= 10)
+	{
+		ft_putnbr_fd(lnb / 10, fd);
+		ft_putnbr_fd(lnb % 10, fd);
+	}
+	else
+		ft_putchar_fd(lnb + '0', fd);
 }
