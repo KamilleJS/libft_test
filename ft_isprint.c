@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:55:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/20 13:09:05 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 21:17:35 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**printing character test (space character inclusive)
+*/
 
 int	ft_isprint(char *str)
 {

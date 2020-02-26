@@ -6,11 +6,15 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:19:38 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 20:46:57 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 21:18:23 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**copy string until character found
+*/
 
 void	*ft_memccpy(void *str1, const void *str2, int c, size_t n)
 {
