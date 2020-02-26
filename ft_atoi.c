@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:44:24 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 19:35:30 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 19:45:52 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
 		nmb = (nmb * 10) + str[i++] - 48;
-	}
 	nmb = nmb * min;
 	if (nmb > 2147483647)
 		return (2147483647);
