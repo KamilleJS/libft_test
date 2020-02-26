@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:15:30 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 19:35:33 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/25 20:03:09 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void    *ft_memset(void *str, int c, size_t len)
 {
     unsigned char   *ptr;
-    size_t          i;
-    
+    size_t  i;
+
     i = 0;
     ptr = (unsigned char*)str;
     while (i < len)
