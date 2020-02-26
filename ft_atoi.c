@@ -32,7 +32,9 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	   nmb = (nmb * 10) + str[i++] - 48;
+	{
+		nmb = (nmb * 10) + str[i++] - 48;
+	}
 	nmb = nmb * min;
 	if (nmb > 2147483647)
 		return (2147483647);
