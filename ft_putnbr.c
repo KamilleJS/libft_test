@@ -6,14 +6,14 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 09:47:45 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 14:39:54 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:10:10 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**output an integer to a standart output
+** output an integer to a standart output
 */
 
 void	ft_putnbr(int nb)

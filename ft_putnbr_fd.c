@@ -6,14 +6,14 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 14:45:56 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 14:49:04 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:10:06 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**output an integer to a file descriptor
+** output an integer to a file descriptor
 */
 
 void	ft_putnbr_fd(int nb, int fd)

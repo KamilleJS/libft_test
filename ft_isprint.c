@@ -6,14 +6,14 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:55:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 21:17:35 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:09:40 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**printing character test (space character inclusive)
+** printing character test (space character inclusive)
 */
 
 int	ft_isprint(char *str)

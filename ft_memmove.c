@@ -6,15 +6,15 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:34:19 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 10:11:41 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:09:51 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**copy byte string
-**returns the original value of dst
+** copy byte string
+** returns the original value of dst
 */
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)

@@ -6,14 +6,14 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:25:10 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 21:19:44 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:09:47 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**copy memory area
+** copy memory area
 */
 
 void	*ft_memcpy(void *str1, const void *str2, size_t n)

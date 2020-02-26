@@ -6,14 +6,14 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 13:09:34 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 21:13:53 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/26 15:09:29 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**test for ASCII character
+** test for ASCII character
 */
 
 int	ft_isascii(char *str)
