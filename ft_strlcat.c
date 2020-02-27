@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 14:24:58 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 10:41:41 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 10:38:08 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/27 12:10:15 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[1];
-		i++;
-	}
-	return (dst);
+	
 }
