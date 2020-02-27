@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:34:19 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:09:51 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/27 10:31:57 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 ** returns the original value of dst
 */
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *str1, const void *str2, size_t len)
 {
 	size_t			i;
 	unsigned char	*dst;
 	unsigned char	*src;
 
-	if (str1 == str2)
-		return (str1);
 	i = 0;
 	dst = (unsigned char *)str1;
 	src = (unsigned char *)str2;
-	while (i < n)
+	if (str1 == str2)
+		return (str1);
+	while (i < len)
 	{
 		dst[i] = src[i];
 		i++;
