@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 14:22:04 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/28 12:14:09 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/28 13:03:30 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strtrim(char const *s)
 {
-	int i;
-	int j;
+	char	*res;
+	int		len;
+	int		i;
 
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		while (str[i + j] == to_find[j])
-			j++;
-		if (!to_find[j])
-			return (&str[i]);
-		j = 0;
-		i++;
-	}
-	return (0);
+	len = ft_strlen(s);
+	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
+		len--;
+	i = -1;
+	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		len--;
+	tfgyuguyh
 }

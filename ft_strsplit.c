@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 14:22:04 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/28 13:03:50 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/28 13:04:27 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	**ft_strsplit(char const *s, char c)
 {
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		while (str[i + j] == to_find[j])
-			j++;
-		if (!to_find[j])
-			return (&str[i]);
-		j = 0;
-		i++;
-	}
-	return (0);
+	
 }

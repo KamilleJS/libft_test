@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:38:08 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 12:10:15 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/27 13:51:43 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	
+lkjlo
 }

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 14:22:04 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 14:18:43 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/27 18:01:45 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int i;
-	int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (str[i])
+	while (str[i] && i < len)
 	{
-		while (str[i + j] == to_find[j])
+		while (str[i + j] == to_find[j] && i + j < len)
 			j++;
 		if (!to_find[j])
 			return (&str[i]);
