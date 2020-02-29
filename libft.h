@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 20:46:40 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/28 18:54:40 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ char				*ft_tolower(char *str);
 char				*ft_toupper(char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memset(void *str, int c, size_t len);
+
 
 #endif
