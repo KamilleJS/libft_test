@@ -6,11 +6,15 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 14:24:58 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 10:41:41 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:25:21 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** copy strings
+*/
 
 char	*ft_strcpy(char *dst, const char *src)
 {

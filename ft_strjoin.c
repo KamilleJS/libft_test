@@ -6,11 +6,16 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 10:25:09 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/28 10:56:32 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:27:20 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** allocates and returns a string ending with ’\0’
+** result of the concatenation of s1 and s2
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

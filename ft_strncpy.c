@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 14:29:12 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/19 15:50:20 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:37:31 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** copy strings
+*/
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {

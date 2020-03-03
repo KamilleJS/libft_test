@@ -6,11 +6,15 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:55:33 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/25 14:48:35 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:41:38 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** lower case to upper case letter conversion
+*/
 
 char	*ft_toupper(char *str)
 {

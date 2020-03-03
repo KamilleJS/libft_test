@@ -6,11 +6,15 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 14:22:04 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:40:04 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** locate a substring to a string
+*/
 
 char	*ft_strstr(const char *str, const char *to_find)
 {

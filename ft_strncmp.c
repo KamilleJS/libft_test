@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 20:00:18 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/20 21:30:55 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:37:03 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** compare strings
+*/
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
