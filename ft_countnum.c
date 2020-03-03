@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_countnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 10:26:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 17:54:29 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/03/02 18:06:34 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/02 18:10:41 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** alphabetic character test
-** returns zero if the character tests false
-** returns non-zero if the character tests true
-*/
-
-int	ft_isalpha(char *str)
+int	ft_countnum(int n)
 {
-	int i;
+	int	c;
 
-	i = 0;
-	if (!str[i])
-		return (1);
-	while ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
-		i++;
-	if (str[i] == '\0')
-		return (1);
-	return (0);
+	c = 1;
+	while (n / 10 != 0)
+	{
+		n = n / 10;
+		c++;
+	}
+	return (c);
 }

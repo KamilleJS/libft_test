@@ -6,7 +6,7 @@
 #    By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 19:28:55 by ikuklina          #+#    #+#              #
-#    Updated: 2020/02/28 19:08:30 by ikuklina         ###   ########.fr        #
+#    Updated: 2020/03/02 17:49:47 by ikuklina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ ft_isalpha.c ft_memdel.c ft_strcat.c ft_strlcat.c ft_strstr.c ft_isascii.c
 ft_memmove.c ft_strchr.c ft_strlen.c ft_strstrim.c ft_isdigit.c ft_memset.c
 ft_strclr.c ft_strmap.c ft_strsub.c ft_isprint.c ft_putchar.c ft_strcmp.c
 ft_strmapi.c ft_tolower.c ft_itoa.c ft_putchar_fd.c ft_strcpy.c ft_strncat.c
-ft_toupper.c ft_lstnew.c ft_putendl.c ft_strdel.c ft_strncmp.c
+ft_toupper.c ft_lstnew.c ft_putendl.c ft_strdel.c ft_strncmp.c ft_lstnew.c
+ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
 
 OBJECTS = ft_memalloc.o ft_putendl_fd.o ft_strdup.o ft_strncpy.o ft_memccpy.o
 ft_putnbr.o ft_strequ.o ft_strnequ.o ft_atoi.o ft_memchr.o ft_putnbr_fd.o
@@ -30,7 +31,8 @@ ft_isalpha.o ft_memdel.o ft_strcat.o ft_strlcat.o ft_strstr.o ft_isascii.o
 ft_memmove.o ft_strchr.o ft_strlen.o ft_strstrim.o ft_isdigit.o ft_memset.o
 ft_strclr.o ft_strmap.o ft_strsub.o ft_isprint.o ft_putchar.o ft_strcmp.o
 ft_strmapi.o ft_tolower.o ft_itoa.o ft_putchar_fd.o ft_strcpy.o ft_strncat.o
-ft_toupper.o ft_lstnew.o ft_putendl.o ft_strdel.o ft_strncmp.o
+ft_toupper.o ft_lstnew.o ft_putendl.o ft_strdel.o ft_strncmp.o ft_lstnew.o
+ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
 all: $(NAME)
 
