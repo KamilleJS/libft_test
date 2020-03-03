@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 17:46:11 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:43:20 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct		s_list
 
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
+int					ft_countnum(int n);
 int					ft_isalnum(int c);
 int					ft_isalpha(char *str);
 int					ft_isascii(char *str);
