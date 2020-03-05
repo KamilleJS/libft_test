@@ -6,11 +6,11 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:20:19 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 15:26:45 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:30:11 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ldif.h"
+#include "libft.h"
 
 /*
 ** locates the last occurrence of a character in a string
