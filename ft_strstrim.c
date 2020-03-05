@@ -6,11 +6,16 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:14:09 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/28 13:03:30 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:42:16 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** allocates and returns a copy of the string without whitespaces
+** at the begining or at the end of the string
+*/
 
 char	*ft_strtrim(char const *s)
 {
@@ -24,5 +29,15 @@ char	*ft_strtrim(char const *s)
 	i = -1;
 	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
 		len--;
-	tfgyuguyh
+	if (len <= 0)
+		len = 0;
+	res = (char*)malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (NULL);
+	s = s + i;
+	i = -1;
+	while (++i < len)
+		res[i] = *s++;
+	res[i] = '\0';
+	return (res);
 }
