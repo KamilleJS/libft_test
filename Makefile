@@ -6,7 +6,7 @@
 #    By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 19:28:55 by ikuklina          #+#    #+#              #
-#    Updated: 2020/03/05 15:10:30 by ikuklina         ###   ########.fr        #
+#    Updated: 2020/03/05 15:15:04 by ikuklina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,10 +34,9 @@ ft_strtrim.o ft_strsub.o ft_tolower.o ft_toupper.o
 
 all: $(NAME)
 
-$(NAME): $(SRCS) libft.h
-	gcc -Wall -Wextra -Werror  -c $(SRCS)
+$(NAME):
+	gcc -c -Wall -Wextra -Werror $(SRCS)
 	ar rcs $(NAME) $(OBJECTS)
-	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJECTS)
