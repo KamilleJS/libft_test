@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 18:43:20 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:46:37 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,11 @@ char				*ft_strncpy(char *dest, char *src, unsigned int n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *str, const char *to_find, size_t len);
+char				*ft_strrchr(const char *str, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *str, const char *to_find);
-char				*ft_strtrim(char const *s);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strtrim(char const *s);
 char				*ft_tolower(char *str);
 char				*ft_toupper(char *str);
 
