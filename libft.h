@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 15:46:37 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 17:00:03 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_countnum(int n);
 int					ft_isalnum(int c);
-int					ft_isalpha(char *str);
+int					ft_isalpha(int c);
 int					ft_isascii(char *str);
-int					ft_isdigit(char *str);
+int					ft_isdigit(int c);
 int					ft_isprint(char *str);
 char				*ft_itoa(int n);
 void				ft_lstadd(t_list **alst, t_list *new);
