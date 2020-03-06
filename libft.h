@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/06 14:05:35 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/06 14:13:57 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				*ft_memalloc(size_t size);
-void				*ft_memccpy(void *str1, const void *str2, int c, size_t len);
+void				*ft_memccpy(void *str1, const void *str2, int c,
+					size_t len);
 void				*ft_memchr(void *str, int c, size_t len);
 int					ft_memcmp(const void *str1, const void *str2, size_t len);
 void				*ft_memcpy(void *str1, const void *str2, size_t len);
@@ -75,7 +76,8 @@ int					ft_strncmp(char *s1, char *s2, unsigned int n);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
-char				*ft_strnstr(const char *str, const char *to_find, size_t len);
+char				*ft_strnstr(const char *str, const char *to_find,
+					size_t len);
 char				*ft_strrchr(const char *str, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *str, const char *to_find);
