@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 17:00:03 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/06 14:05:35 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void				ft_bzero(void *s, size_t n);
 int					ft_countnum(int n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
-int					ft_isascii(char *str);
+int					ft_isascii(int str);
 int					ft_isdigit(int c);
-int					ft_isprint(char *str);
+int					ft_isprint(int str);
 char				*ft_itoa(int n);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -57,6 +57,7 @@ void				ft_putstr_fd(char *str, int fd);
 void				ft_putstr(char *str);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
+void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
@@ -80,7 +81,7 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
-char				*ft_tolower(char *str);
-char				*ft_toupper(char *str);
+int					ft_tolower(int str);
+int					ft_toupper(int str);
 
 #endif
