@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:05:33 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 18:13:56 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 16:53:47 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c))
+	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
 		return (1);
-	else if (ft_isdigit(c))
-		return (1);
-	else
-		return (0);
+	return (0);
 }

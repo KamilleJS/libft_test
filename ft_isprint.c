@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:55:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:09:40 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 18:11:24 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,9 @@
 ** printing character test (space character inclusive)
 */
 
-int	ft_isprint(char *str)
+int	ft_isprint(int str)
 {
-	int i;
-
-	i = 0;
-	if (!str[i])
-		return (1);
-	while (str[i] >= 0 && str[i] <= 31 && str[i] == 127)
-		i++;
-	if (str[i] == '\0')
+	if (str > 31 && str < 127)
 		return (1);
 	return (0);
 }

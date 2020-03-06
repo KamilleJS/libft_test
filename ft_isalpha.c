@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:26:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 17:54:29 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/05 16:55:57 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,10 @@
 ** returns non-zero if the character tests true
 */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int i;
-
-	i = 0;
-	if (!str[i])
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
-	while ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
-		i++;
-	if (str[i] == '\0')
-		return (1);
-	return (0);
+	else
+		return (0);
 }
