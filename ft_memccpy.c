@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:19:38 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 09:50:40 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 14:44:11 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void	*ft_memccpy(void *str1, const void *str2, int c, size_t len)
 			return (str1 + i + 1);
 		i++;
 	}
-	return (str1);
+	return (NULL);
 }
