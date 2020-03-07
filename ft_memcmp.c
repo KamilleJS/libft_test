@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 09:57:53 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 10:30:20 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 14:14:56 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t len)
 	s2 = (unsigned char*)str2;
 	while (i < len)
 	{
-		if (s1[i] == s2[i])
-			return (0);
-		else
+		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
 		i++;
 	}
