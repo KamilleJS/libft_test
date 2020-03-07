@@ -6,11 +6,13 @@
 #    By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 19:28:55 by ikuklina          #+#    #+#              #
-#    Updated: 2020/03/06 22:38:50 by ikuklina         ###   ########.fr        #
+#    Updated: 2020/03/07 10:18:38 by ikuklina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+FLAGS = -I. -Wall -Werror -Wextra
 
 SRCS = ft_atoi.c ft_bzero.c ft_countnum.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 ft_isdigit.c ft_isprint.c ft_itoa.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
@@ -35,8 +37,9 @@ ft_strstr.o ft_strtrim.o ft_strsub.o ft_tolower.o ft_toupper.o ft_strrchr.o \
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRCS)
-	ar rcs $(NAME) $(OBJECTS)
+	gcc -c $(SRCS) $(FLAGS)
+	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJECTS)
