@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 14:18:43 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 18:38:14 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 10:29:55 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		while (str[i + j] == to_find[j] && i + j < len)
 			j++;
 		if (!to_find[j])
-			return (&str[i]);
+			return ((char*)&str[i]);
 		j = 0;
 		i++;
 	}
