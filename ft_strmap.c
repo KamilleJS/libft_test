@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 20:53:03 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 21:29:53 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:02:50 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,14 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*news;
-	int		i;
+	size_t	i;
 
-	i = 0;
-	news = (char *)s;
-	news = ft_memalloc(ft_strlen(s) + 1);
-	while (*s)
-	{
+	i = -1;
+	if (!s || !f)
+		return (NULL);
+	if (!(news = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (s[++i])
 		news[i] = f(s[i]);
-		i++;
-	}
-	news[i] = '\0';
 	return (news);
 }
