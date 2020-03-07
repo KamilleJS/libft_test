@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 16:34:19 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/06 10:53:12 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 13:07:07 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,22 @@ void	*ft_memmove(void *str1, const void *str2, size_t len)
 {
 	unsigned char	*dst;
 	unsigned char	*src;
+	size_t			i;
 
-	dst = (unsigned char *)str1;
-	src = (unsigned char *)str2;
 	if (str1 == str2)
 		return (str1);
-	while (len > 0)
+	else if (str1 < str2)
+		ft_memcpy(str1, str2, len);
+	else
 	{
-		len--;
-		dst[len] = src[len];
+		i = 0;
+		dst = (unsigned char *)str1;
+		src = (unsigned char *)str2;
+		while (len > 0)
+		{
+			len--;
+			dst[len] = src[len];
+		}
 	}
 	return (str1);
 }
