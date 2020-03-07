@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:44:24 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:09:10 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 14:37:48 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(char *str)
 	nmb = 0;
 	if (!str[i])
 		return (0);
-	while (str[i] < 33)
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -36,7 +36,7 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-		nmb = (nmb * 10) + str[i++] - 48;
+		nmb = (nmb * 10) + str[i++] - '0';
 	nmb = nmb * min;
 	if (nmb > 2147483647)
 		return (2147483647);
