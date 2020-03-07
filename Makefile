@@ -6,7 +6,7 @@
 #    By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 19:28:55 by ikuklina          #+#    #+#              #
-#    Updated: 2020/03/07 10:18:38 by ikuklina         ###   ########.fr        #
+#    Updated: 2020/03/07 10:47:12 by ikuklina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME = libft.a
 
 FLAGS = -I. -Wall -Werror -Wextra
 
-SRCS = ft_atoi.c ft_bzero.c ft_countnum.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-ft_isdigit.c ft_isprint.c ft_itoa.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
+SRCS = ft_atoi.c ft_bzero.c ft_countnum.c ft_countwords.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+ft_isdigit.c ft_isprint.c ft_itoa.c ft_length.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
 ft_lstmap.c ft_lstnew.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 ft_memdel.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putchar.c ft_putendl_fd.c \
 ft_putendl.c ft_putnbr_fd.c ft_putnbr.c ft_putstr_fd.c ft_putstr.c ft_strcat.c \
@@ -24,8 +24,8 @@ ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_
 ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strsplit.c \
 ft_strstr.c ft_strtrim.c ft_strsub.c ft_tolower.c ft_toupper.c ft_strrchr.c \
 
-OBJECTS = ft_atoi.o ft_bzero.o ft_countnum.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
-ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o \
+OBJECTS = ft_atoi.o ft_bzero.o ft_countnum.o ft_countwords.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
+ft_isdigit.o ft_isprint.o ft_itoa.o ft_length.o ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o \
 ft_lstmap.o ft_lstnew.o ft_memalloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o \
 ft_memdel.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putchar.o ft_putendl_fd.o \
 ft_putendl.o ft_putnbr_fd.o ft_putnbr.o ft_putstr_fd.o ft_putstr.o ft_strcat.o \

@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/06 14:13:57 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 10:47:39 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ typedef struct		s_list
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_countnum(int n);
+int					ft_countwords(char const *str, char c);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int str);
 int					ft_isdigit(int c);
 int					ft_isprint(int str);
 char				*ft_itoa(int n);
+int					length(const char *str, char c);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
