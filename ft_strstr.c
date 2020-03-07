@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 14:52:51 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:18:52 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,25 @@
 
 char	*ft_strstr(const char *str, const char *to_find)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
+	int a;
 
 	i = 0;
 	while (str[i])
 	{
 		j = 0;
-		while (str[i + j] == to_find[j])
+		a = i;
+		while (to_find[j] == str[a] && to_find[j])
 		{
-			if (!to_find[j + 1])
-				return ((char*)&str[i]);
+			a++;
 			j++;
 		}
+		if (to_find[j] == '\0')
+			return ((char *)(str + a - ft_strlen(to_find)));
 		i++;
 	}
-	return (0);
+	if (*to_find == '\0')
+		return ((char *)str);
+	return (NULL);
 }
