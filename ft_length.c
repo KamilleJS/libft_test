@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 10:43:30 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 10:45:06 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 10:48:34 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** find length of words
 */
 
-int	length(const char *str, char c)
+int	ft_length(const char *str, char c)
 {
 	int len;
 

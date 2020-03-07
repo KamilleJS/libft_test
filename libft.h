@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 10:47:39 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 10:48:43 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int					ft_isascii(int str);
 int					ft_isdigit(int c);
 int					ft_isprint(int str);
 char				*ft_itoa(int n);
-int					length(const char *str, char c);
+int					ft_length(const char *str, char c);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
