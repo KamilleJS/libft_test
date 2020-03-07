@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 12:32:59 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 14:52:51 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strstr(const char *str, const char *to_find)
 	int	j;
 
 	i = 0;
-
 	while (str[i])
 	{
 		j = 0;
