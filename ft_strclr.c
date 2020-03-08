@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 20:11:36 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 16:52:14 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 16:55:04 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	ft_strclr(char *s)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 	{
 		*s = '\0';
