@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 21:30:58 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/08 13:11:52 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/08 13:18:42 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*news;
 	unsigned int	i;
-	int				j;
 
 	if (!s || !f)
 		return (NULL);
 	i = 0;
-	j = 0;
-	news = (char *)s;
 	news = (char *)(malloc(sizeof(char) * (ft_strlen(s) + 1)));
-	while (s[j])
+	if (news == NULL)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		news[j] = f(i, s[j]);
+		news[i] = f(i, s[i]);
 		i++;
-		j++;
 	}
-	news[j] = '\0';
+	news[i] = '\0';
 	return (news);
 }
