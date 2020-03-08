@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 09:36:40 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/28 09:45:31 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 17:04:22 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	while (*s1 && *s2 && n > 1)
 	{
 		if (*s1 != *s2)

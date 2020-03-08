@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 21:30:58 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/27 21:36:12 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 17:01:55 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	int				j;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	j = 0;
 	news = (char *)s;

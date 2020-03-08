@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 10:25:09 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 18:27:20 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 17:05:02 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
 
+	if (!s1 || !s2)
+		return (NULL);
 	join = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (!s1 || !s2 || !join)
 		return (NULL);
