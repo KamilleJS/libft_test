@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 09:45:57 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 15:41:09 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/07 16:26:11 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*subs;
+	size_t		i;
+	char		*subs;
 
 	i = -1;
 	if (!s)
