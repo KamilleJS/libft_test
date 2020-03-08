@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 21:30:58 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 17:01:55 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/08 13:11:52 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	j = 0;
 	news = (char *)s;
-	news = ft_memalloc(ft_strlen(s) + 1);
+	news = (char *)(malloc(sizeof(char) * (ft_strlen(s) + 1)));
 	while (s[j])
 	{
 		news[j] = f(i, s[j]);
