@@ -6,11 +6,11 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 14:06:31 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/08 14:29:56 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/08 14:40:13 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ldif.h"
+#include "libft.h"
 
 /*
 ** returns new string with changed character
