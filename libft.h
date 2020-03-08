@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/08 14:30:31 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/08 14:43:02 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void				ft_putnbr_fd(int nb, int fd);
 void				ft_putnbr(int nb);
 void				ft_putstr_fd(char *str, int fd);
 void				ft_putstr(char *str);
-char				*ft_replace(char *str, char a, char b)
+char				*ft_replace(char *str, char a, char b);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
