@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_count_symb_word.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 15:32:27 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/26 15:34:34 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 19:48:57 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/28 16:03:05 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the file descriptor fd.
+** Counts number of words except char c.
 */
 
-void	ft_putstr_fd(char const *s, int fd)
+int	ft_count_symb_word(char *s, char c)
 {
 	int	i;
+	int	len;
+	int	count_words;
 
 	i = 0;
+	len = 0;
+	count_words = 0;
+	if (!s)
+		return (0);
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i], 1);
-		i++;
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		while (s[i] != c && s[i] != '\0')
+		{
+			len++;
+			i++;
+		}
+		count_words++;
 	}
+	return (count_words);
 }

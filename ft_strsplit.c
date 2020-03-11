@@ -3,45 +3,71 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 13:03:50 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 10:54:36 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 19:32:49 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/28 18:37:41 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** allocates and returns an array of strings (all ending with ’\0’,
-** including the array itself)
-** obtained by spliting s using the character c as a delimiter
+** Allocates (with malloc(3)) and returns an array of “fresh” strings
+** (all ending with ’\0’, including the array itself) obtained by
+** spliting s using the character c as a delimiter.
+** If the allocation fails the function returns NULL.
 */
 
-char	**ft_strsplit(char const *str, char c)
+static char		*ft_word_symb(const char *str, char c, int *i)
 {
-	char	**s;
-	int		num;
-	int		i;
+	char	*s;
+	int		k;
+	int		len;
 	int		j;
 
-	if (str == NULL)
+	len = 0;
+	j = *i;
+	while (str[j] != c && str[j])
+	{
+		j++;
+		len++;
+	}
+	if (!(s = (char *)malloc(sizeof(s) * (len + 1))))
 		return (NULL);
-	num = ft_countwords(str, c);
-	s = (char**)malloc(sizeof(char*) * (num + 1));
-	if (s == NULL)
-		return (NULL);
+	k = 0;
+	while (str[*i] != c && str[*i])
+	{
+		s[k] = str[*i];
+		k++;
+		*i += 1;
+	}
+	s[k] = '\0';
+	while (str[*i] == c && str[*i])
+		*i += 1;
+	return (s);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	int		i;
+	int		j;
+	int		words;
+	char	**arr;
+
 	i = 0;
 	j = 0;
-	while (i < num)
-	{
-		while (str[j] && str[j] == c)
-			j++;
-		s[i] = ft_strsub(str, j, ft_length(str + j, c));
-		while (str[j] && str[j] != c)
-			j++;
+	words = ft_count_symb_word((char *)s, c);
+	arr = (char **)(malloc(sizeof(char *) * (words + 1)));
+	if (arr == NULL || !s || !c)
+		return (NULL);
+	while (s[i] == c && s[i] != '\0')
 		i++;
+	while (s[i] != c && s[i] != '\0' && j < words)
+	{
+		arr[j] = ft_word_symb(s, c, &i);
+		j++;
 	}
-	s[i] = NULL;
-	return (s);
+	arr[j] = NULL;
+	return (arr);
 }

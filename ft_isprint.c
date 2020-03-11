@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:55:13 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 18:11:24 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/19 19:03:28 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/25 21:07:40 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** printing character test (space character inclusive)
+** Printing character test (space character inclusive).
 */
 
-int	ft_isprint(int str)
+int		ft_isprint(int c)
 {
-	if (str > 31 && str < 127)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

@@ -3,34 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 14:45:56 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:10:06 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/26 15:42:09 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/05 18:26:06 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** output an integer to a file descriptor
+** Outputs the integer n to the file descriptor fd.
 */
 
-void	ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	long int lnb;
+	int	i;
 
-	lnb = nb;
-	if (lnb < 0)
-	{
-		ft_putchar_fd('-', fd);
-		lnb = lnb * -1;
-	}
-	if (lnb >= 10)
-	{
-		ft_putnbr_fd(lnb / 10, fd);
-		ft_putnbr_fd(lnb % 10, fd);
-	}
+	i = 0;
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
 	else
-		ft_putchar_fd(lnb + '0', fd);
+	{
+		if (n < 0)
+		{
+			write(fd, "-", 1);
+			n *= -1;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr_fd(n / 10, fd);
+		}
+		i = (n % 10) + '0';
+		write(fd, &i, 1);
+	}
 }

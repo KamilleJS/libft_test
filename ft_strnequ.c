@@ -3,31 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 09:36:40 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 17:04:22 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 18:18:30 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/28 16:23:21 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** comparison between s1 and s2
-** up to n char- acters or until a ’\0’ is reached
+** Lexicographical comparison between s1 and s2 up to n characters or
+** until a ’\0’ is reached. If the 2 strings are identical,
+** the function returns 1, or 0 otherwise.
 */
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	int	i;
+
+	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	while (*s1 && *s2 && n > 1)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-		n--;
-	}
-	return (1);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	return (0);
 }

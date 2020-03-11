@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 10:04:34 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:10:03 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/26 14:14:48 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/28 16:09:56 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** outputs a character or word to a standart output
+** Outputs the character c to the standard output.
 */
 
 void	ft_putchar(char c)

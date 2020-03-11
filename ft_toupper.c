@@ -3,22 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 11:55:33 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/06 13:00:53 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/19 16:27:22 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/07 20:03:02 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** lower case to upper case letter conversion
-*/
-
-int	ft_toupper(int str)
+int		ft_toupper(int c)
 {
-	if (str >= 'a' && str <= 'z')
-		return (str - 'a' + 'A');
-	return (str);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

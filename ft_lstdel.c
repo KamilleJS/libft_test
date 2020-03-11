@@ -3,32 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/02 17:19:40 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 17:27:17 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/28 16:44:00 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/07 12:08:50 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** takes as a parameter the adress of a pointer to a link and frees the memory
-** of this link and every successors of that link
-** using the functions del and free
+** Takes as a parameter the address of a pointer to a link and
+** frees the memory of this link and every successors of that link
+** using the functions del and free(3). Finally the pointer to
+** the link that was just freed must be set to NULL.
 */
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list *temp;
+	t_list	*list;
+	t_list	*next_list;
 
-	if (alst && *alst && del)
+	list = *alst;
+	while (list)
 	{
-		while (*alst)
-		{
-			temp = (*alst)->next;
-			ft_lstdelone(alst, del);
-			(*alst) = temp;
-		}
+		next_list = list->next;
+		del(list->content, list->content_size);
+		free(list);
+		list = next_list;
 	}
+	*alst = NULL;
 }

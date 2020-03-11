@@ -3,44 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 14:04:28 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/02 18:19:31 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/03/07 15:23:23 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/07 15:23:27 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** allocate and returns a string ending with ’\0’ representing the integer n
-** given as argument
+** Allocate (with malloc(3)) and returns a “fresh” string ending with ’\0’
+** representing the integer n given as argument. Negative numbers
+** must be supported. If the allocation fails, the function returns NULL.
 */
 
-char	*ft_itoa(int n)
+static void	itoa_isnegative(int *n, int *negative)
 {
-	char	*str;
-	int		i;
-	int		j;
-	int		num;
-
-	i = 0;
-	if (n < 0)
-		i = 1;
-	num = ft_countnum(n);
-	str = ft_strnew(num + i);
-	if (str == NULL)
-		return (NULL);
-	if (i)
-		str[0] = '-';
-	j = num + i - 1;
-	while (j >= i)
+	if (*n < 0)
 	{
-		if (i)
-			str[j--] = (n % 10 * -1) + '0';
-		else
-			str[j--] = n % 10 + '0';
+		*n *= -1;
+		*negative = 1;
+	}
+}
+
+char		*ft_itoa(int n)
+{
+	int		temp;
+	int		len;
+	int		negative;
+	char	*string;
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	temp = n;
+	len = 2;
+	negative = 0;
+	itoa_isnegative(&n, &negative);
+	while (temp /= 10)
+		len++;
+	len += negative;
+	if ((string = (char*)malloc(sizeof(char) * len)) == NULL)
+		return (NULL);
+	string[--len] = '\0';
+	while (len--)
+	{
+		string[len] = n % 10 + '0';
 		n = n / 10;
 	}
-	return (str);
+	if (negative)
+		string[0] = '-';
+	return (string);
 }
