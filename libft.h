@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:53:14 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/07 20:09:01 by boyola           ###   ########.fr       */
+/*   Updated: 2020/03/11 13:51:34 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ float				ft_get_max(float a, float b);
 float				ft_get_min(float a, float b);
 int					ft_list_size(t_list *begin_list);
 int					ft_count_symb_char(char *s, char c);
+int					ft_countnum(int n);
 
 #endif
