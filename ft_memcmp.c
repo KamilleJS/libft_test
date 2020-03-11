@@ -3,41 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 18:33:29 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/06 20:27:37 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 09:57:53 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 14:14:56 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Compare byte string.
-** Returns zero if the two strings are identical, otherwise returns the
-** difference between the first two differing bytes.
+** compare byte string
 */
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t len)
 {
-	unsigned char	*ps1;
-	unsigned char	*ps2;
 	size_t			i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-	ps1 = (unsigned char*)s1;
-	ps2 = (unsigned char*)s2;
 	i = 0;
-	if (s1 == s2 || n == 0)
-		return (0);
-	while (*ps1 == *ps2 && ++i < n)
+	s1 = (unsigned char*)str1;
+	s2 = (unsigned char*)str2;
+	while (i < len)
 	{
-		if (*ps1 != *ps2)
-			return (*ps1 - *ps2);
-		if (n > 0)
-		{
-			ps1++;
-			ps2++;
-		}
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	return ((int)(*ps1 - *ps2));
+	return (0);
 }
