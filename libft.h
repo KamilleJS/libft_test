@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:53:14 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 14:32:05 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 14:35:11 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *str1, const void *str2, size_t len);
-void				*ft_memchr(const void *s, int c, size_t n);
+void				*ft_memchr(void *str, int c, size_t len);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
