@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:53:14 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 10:21:39 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 10:31:14 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-char				*ft_strset(char *b, char c, size_t len);
 int					ft_count_symb_word(char *s, char c);
 float				ft_get_max(float a, float b);
 float				ft_get_min(float a, float b);
