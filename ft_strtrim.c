@@ -3,43 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 12:14:09 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 17:06:00 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 18:59:26 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 15:47:23 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** allocates and returns a copy of the string without whitespaces
-** at the begining or at the end of the string
+** Allocates (with malloc(3)) and returns a copy of the string given as argument
+** without whitespaces at the beginning or at the end of the string.
+** Will be considered as whitespaces the following characters ’ ’,
+** ’\n’ and ’\t’. If s has no whitespaces at the beginning or at the end,
+** the function returns a copy of s. If the allocation
+** fails the function returns NULL.
 */
 
 char	*ft_strtrim(char const *s)
 {
-	char	*res;
-	int		len;
-	int		i;
+	char	*result;
+	int		tail;
+	int		head;
 
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
-	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
-		len--;
-	i = -1;
-	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		len--;
-	if (len <= 0)
-		len = 0;
-	res = (char*)malloc(sizeof(char) * (len + 1));
-	if (res == NULL)
+	tail = ft_strlen(s);
+	while (s[tail - 1] == ' ' || s[tail - 1] == '\t' || s[tail - 1] == '\n')
+		tail--;
+	head = -1;
+	while (s[++head] == ' ' || s[head] == '\t' || s[head] == '\n')
+		tail--;
+	if (tail <= 0)
+		tail = 0;
+	result = (char*)malloc(sizeof(char) * (tail + 1));
+	if (result == NULL)
 		return (NULL);
-	s = s + i;
-	i = -1;
-	while (++i < len)
-		res[i] = *s++;
-	res[i] = '\0';
-	return (res);
+	s += head;
+	head = -1;
+	while (++head < tail)
+		result[head] = *s++;
+	result[head] = '\0';
+	return (result);
 }

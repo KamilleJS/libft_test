@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:32:49 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 10:27:58 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/02/28 18:37:41 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char		*ft_word_symb(const char *str, char c, int *i)
 	return (s);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -57,7 +57,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	words = ft_countwords((char *)s, c);
+	words = ft_count_symb_word((char *)s, c);
 	arr = (char **)(malloc(sizeof(char *) * (words + 1)));
 	if (arr == NULL || !s || !c)
 		return (NULL);
