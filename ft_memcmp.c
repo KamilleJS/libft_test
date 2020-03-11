@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 09:57:53 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/11 14:31:29 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/25 18:33:29 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 20:27:37 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** compare byte string
+** Compare byte string.
+** Returns zero if the two strings are identical, otherwise returns the
+** difference between the first two differing bytes.
 */
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
