@@ -3,31 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 09:15:30 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 12:14:47 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/19 16:31:50 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/27 12:06:51 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** fill a byte string with a byte value
-** returns its first argument
+** Fill a byte string with a byte value.
 */
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	unsigned char *dup;
 
-	i = 0;
-	ptr = str;
-	while (i < len)
+	dup = (unsigned char*)b;
+	c = (unsigned char)c;
+	while (len > 0)
 	{
-		ptr[i] = c;
-		i++;
+		*dup = c;
+		dup++;
+		len--;
 	}
-	return (str);
+	return (b);
 }

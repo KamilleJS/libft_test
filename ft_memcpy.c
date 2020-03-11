@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 15:25:10 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/08 13:13:23 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/19 16:33:17 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 22:40:42 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** copy memory area
+** Copy n bytes from memory area src to memory area dst.
 */
 
-void	*ft_memcpy(void *str1, const void *str2, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char	*dst;
-	unsigned char	*src;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	i = 0;
-	dst = (unsigned char *)str1;
-	src = (unsigned char *)str2;
-	if (dst == NULL && src == NULL && len)
+	d = (unsigned char*)dst;
+	s = (unsigned char*)src;
+	if (d == NULL && s == NULL && n)
 		return (NULL);
-	while (i < len)
+	while (i < n)
 	{
-		dst[i] = src[i];
+		d[i] = s[i];
 		i++;
 	}
-	return (str1);
+	return (dst);
 }

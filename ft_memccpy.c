@@ -3,33 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 16:19:38 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 14:44:11 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/20 16:40:37 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/27 12:16:26 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** copy string until character found
+** Copy string until character found.
+**  If the character c occurs in the string src, the copy stops
+** and a pointer to the byte after the copy of c in the string dst is returned.
 */
 
-void	*ft_memccpy(void *str1, const void *str2, int c, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
+	unsigned char	*d;
+	unsigned char	*s;
 	size_t			i;
-	unsigned char	*dst;
-	unsigned char	*src;
 
+	d = (unsigned char*)dst;
+	s = (unsigned char*)src;
 	i = 0;
-	dst = (unsigned char *)str1;
-	src = (unsigned char *)str2;
-	while (i < len)
+	c = (unsigned char)c;
+	while (n > i)
 	{
-		dst[i] = src[i];
-		if (src[i] == (unsigned char)c)
-			return (str1 + i + 1);
+		d[i] = s[i];
+		if (s[i] == c)
+			return (dst + i + 1);
 		i++;
 	}
 	return (NULL);
