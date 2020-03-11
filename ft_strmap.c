@@ -3,31 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 20:53:03 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 15:02:50 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 16:48:44 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 10:23:34 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** applies the function f to each character of the string given as argument
-** to create a new string
+** Applies the function f to each character of the string given
+** as argument to create a “fresh” new string (with malloc(3))
+** resulting from the successive applications of f.
 */
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*news;
-	size_t	i;
+	int		i;
+	char	*new;
 
-	i = -1;
 	if (!s || !f)
 		return (NULL);
-	if (!(news = ft_strnew(ft_strlen(s))))
+	new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	i = 0;
+	if (new == NULL)
 		return (NULL);
-	while (s[++i])
-		news[i] = f(s[i]);
-	return (news);
+	while (s[i] != '\0')
+	{
+		new[i] = f(s[i]);
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
 }

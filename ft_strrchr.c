@@ -3,33 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 15:20:19 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 15:30:11 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/27 14:07:16 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/27 14:12:02 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** locates the last occurrence of a character in a string
-** returns a pointer to the last location of c in string, if the c is found
+** Locate the last occurrence of c.
 */
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	*p;
+	int rev;
 
-	i = 0;
-	p = (char *)str;
-	while (str[i])
-		i++;
-	while (str[i] != c && i != 0)
-		i--;
-	if (str[i] == c)
-		return (p + i);
-	else
-		return (NULL);
+	rev = ft_strlen(s);
+	while (s[rev] != c && rev != 0)
+		rev--;
+	if (s[rev] == c)
+		return ((char*)(&s[rev]));
+	return (NULL);
 }

@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 10:21:27 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/02/26 15:10:12 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/26 14:19:30 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/26 14:22:13 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** outputs a string to a standart output
+** Outputs the string s to the standard output.
 */
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *s)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		ft_putchar(str[i]);
+		write(1, &s[i], 1);
 		i++;
 	}
 }

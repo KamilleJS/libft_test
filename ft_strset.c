@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 15:32:27 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/26 15:34:34 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/26 16:17:39 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/28 18:52:58 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the file descriptor fd.
+** Fill a string with a value.
 */
 
-void	ft_putstr_fd(char const *s, int fd)
+char	*ft_strset(char *b, char c, size_t len)
 {
-	int	i;
+	char *dup;
 
-	i = 0;
-	while (s[i] != '\0')
+	dup = b;
+	while (len > 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		*dup = c;
+		dup++;
+		len--;
 	}
+	return (b);
 }

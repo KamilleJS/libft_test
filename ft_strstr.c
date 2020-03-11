@@ -3,40 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 12:37:17 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/07 15:18:52 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/21 16:43:06 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/27 14:14:27 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** locate a substring to a string
+** locates the first occurrence of the null-terminated string needle in
+** the null-terminated string haystack.
+** If needle is an empty string, haystack is returned;
+** if needle occurs nowhere in haystack, NULL is returned; other-wise a pointer
+** to the first character of the first occurrence of needle is returned.
 */
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int i;
-	int j;
-	int a;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
-	while (str[i])
+	if (!*needle)
+		return ((char*)haystack);
+	while (haystack[i])
 	{
-		j = 0;
-		a = i;
-		while (to_find[j] == str[a] && to_find[j])
+		if (haystack[i] == needle[0])
 		{
-			a++;
-			j++;
+			j = 1;
+			while (needle[j] != '\0' && haystack[i + j] == needle[j])
+				j++;
+			if (needle[j] == '\0')
+				return ((char*)haystack + i);
 		}
-		if (to_find[j] == '\0')
-			return ((char *)(str + a - ft_strlen(to_find)));
 		i++;
 	}
-	if (*to_find == '\0')
-		return ((char *)str);
 	return (NULL);
 }
