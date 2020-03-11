@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:53:14 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 13:51:34 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 14:01:31 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ float				ft_get_min(float a, float b);
 int					ft_list_size(t_list *begin_list);
 int					ft_count_symb_char(char *s, char c);
 int					ft_countnum(int n);
+int					ft_countwords(char const *str, char c);
 
 #endif
