@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/11 09:23:03 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 09:44:08 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *str1, const void *str2, int c,
 					size_t len);
-void				*ft_memchr(void *str, int c, size_t len);
+void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *str1, const void *str2, size_t len);
 void				*ft_memcpy(void *str1, const void *str2, size_t len);
 void				ft_memdel(void **ap);
