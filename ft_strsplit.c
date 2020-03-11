@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:32:49 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 10:25:50 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 10:27:58 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char		*ft_word_symb(const char *str, char c, int *i)
 	return (s);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
