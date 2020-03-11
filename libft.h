@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/08 14:43:02 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/10 21:34:57 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_countnum(int n);
 int					ft_countwords(char const *str, char c);
