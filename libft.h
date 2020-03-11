@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:04:32 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/10 21:34:57 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 09:23:03 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
-size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));

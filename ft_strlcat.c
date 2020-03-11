@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:38:08 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/11 09:16:42 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 09:22:35 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** size-bounded string copying and concatinating
 */
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	j;
