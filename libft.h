@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:53:14 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/11 09:59:46 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 10:04:57 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 char				*ft_itoa(int nbr);
-char				**ft_strsplit(char const *s, char c);
+char				**ft_strsplit(char const *str, char c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
