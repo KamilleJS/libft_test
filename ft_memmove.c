@@ -3,39 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 10:46:51 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/06 15:47:54 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/25 16:34:19 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 13:07:07 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Copy byte string. !!!If overlap then copy from end!!!
-** Returns the original value of dst.
+** copy byte string
+** returns the original value of dst
 */
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *str1, const void *str2, size_t len)
 {
-	size_t				i;
-	unsigned char		*d;
-	unsigned char		*s;
+	unsigned char	*dst;
+	unsigned char	*src;
+	size_t			i;
 
-	i = 0;
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	if (d == NULL && s == NULL)
-		return (NULL);
-	if (s < d)
-		while ((int)(--len) >= 0)
-			*(d + len) = *(s + len);
+	if (str1 == str2)
+		return (str1);
+	else if (str1 < str2)
+		ft_memcpy(str1, str2, len);
 	else
-		while (i < len)
+	{
+		i = 0;
+		dst = (unsigned char *)str1;
+		src = (unsigned char *)str2;
+		while (len > 0)
 		{
-			*(d + i) = *(s + i);
-			i++;
+			len--;
+			dst[len] = src[len];
 		}
-	return (dst);
+	}
+	return (str1);
 }

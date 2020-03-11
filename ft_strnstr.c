@@ -3,40 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 19:18:41 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 14:31:19 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 14:18:43 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 13:15:20 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Locate a substring in a string,
-** where not more than len characters are searched.
+** locate a substring to a string
 */
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t	j;
 	size_t	i;
+	size_t	j;
+	char	*str1;
+	char	*find;
 
-	j = 0;
-	if (!*needle)
-		return ((char*)haystack);
-	while (haystack[j] != '\0' && j < len)
+	str1 = (char *)str;
+	find = (char *)to_find;
+	if (find[0] == '\0' || find == NULL)
+		return (str1);
+	i = 0;
+	while (str1[i] && i < len)
 	{
-		if (haystack[j] == needle[0])
+		j = 0;
+		while (find[j] == str1[i + j] && i + j < len)
 		{
-			i = 0;
-			while (needle[i] != '\0' && haystack[j + i] == needle[i] &&
-							(j + i) < len)
-				i++;
-			if (needle[i] == '\0')
-				return ((char*)&haystack[j]);
+			if (find[j + 1] == '\0')
+				return (str1 + i);
+			j++;
 		}
-		j++;
+		i++;
 	}
 	return (NULL);
 }

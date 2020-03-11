@@ -3,31 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 16:30:37 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 16:46:27 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 20:18:01 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 17:14:53 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Applies the function f to each character of the string passed as argument.
-** Each character is passed by address to f to be modified if necessary.
+** applies the function f to each character of the string passed as argument
 */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int	i;
-
-	i = 0;
 	if (s != NULL && f != NULL)
 	{
-		while (s[i] != '\0')
+		while (*s)
 		{
-			f(&s[i]);
-			i++;
+			f(s);
+			s++;
 		}
 	}
 }

@@ -3,24 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 19:58:45 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 14:34:37 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/19 20:00:18 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 16:32:52 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Compares not more than n characters.
-** Return an integer greater than, equal to, or less than 0, according as the
-** string s1 is greater than, equal to, or less than the string s2.gg
+** compare strings
 */
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	size_t i;
+	unsigned int i;
 
 	i = 0;
 	if (n == 0)

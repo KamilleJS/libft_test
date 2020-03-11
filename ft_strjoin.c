@@ -3,32 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:48:54 by boyola            #+#    #+#             */
-/*   Updated: 2020/03/06 10:20:24 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/28 10:25:09 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 17:05:02 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’,
-** result of the concatenation of s1 and s2.
+** allocates and returns a string ending with ’\0’
+** result of the concatenation of s1 and s2
 */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	len;
-	char			*new_str;
+	char	*join;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = (ft_strlen(s1) + ft_strlen(s2));
-	new_str = (char *)(malloc(sizeof(char) * (len + 1)));
-	if (new_str == NULL)
+	join = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (!s1 || !s2 || !join)
 		return (NULL);
-	ft_strcpy(new_str, s1);
-	ft_strcat(new_str, s2);
-	return (new_str);
+	ft_strcpy(join, s1);
+	ft_strcat(join, s2);
+	return (join);
 }

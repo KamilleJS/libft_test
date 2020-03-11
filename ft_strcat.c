@@ -3,33 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 19:10:26 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 13:20:01 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/19 15:51:20 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/27 13:23:00 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Concatenate strings.
-** Functions return the pointer s1.
+** concatenate strings
 */
 
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *dst, const char *src)
 {
-	unsigned int len;
 	unsigned int i;
+	unsigned int j;
 
-	len = ft_strlen(s1);
 	i = 0;
-	while (s2[i] != '\0')
-	{
-		s1[len] = s2[i];
+	j = 0;
+	while (dst[i] != '\0')
 		i++;
-		len++;
+	while (src[j] != '\0')
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	s1[len] = '\0';
-	return (s1);
+	dst[i] = '\0';
+	return (dst);
 }

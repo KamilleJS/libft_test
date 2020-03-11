@@ -3,21 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 16:06:24 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 14:54:13 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 20:01:52 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/02/27 20:09:51 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Takes as a parameter the address of a string that need to be
-** freed with free(3), then sets its pointer to NULL.
+** frees the string's address and sets its pointer to NULL
 */
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void**)as);
+	if (as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

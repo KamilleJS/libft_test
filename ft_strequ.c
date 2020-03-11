@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:09:26 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/28 19:33:37 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/28 09:11:20 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 17:31:30 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Lexicographical comparison between s1 and s2. If the 2
-** strings are identical the function returns 1, or 0 otherwise.
+** comparison between s1 and s2
 */
 
 int	ft_strequ(char const *s1, char const *s2)

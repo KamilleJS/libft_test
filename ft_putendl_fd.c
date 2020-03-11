@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 15:35:56 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/26 15:39:27 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/28 16:38:30 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/07 10:23:42 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the file descriptor fd followed by a ’\n’.
+** outputs the string s to the file descriptor fd followed by a new line
 */
 
 void	ft_putendl_fd(char const *s, int fd)
@@ -21,7 +21,7 @@ void	ft_putendl_fd(char const *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;

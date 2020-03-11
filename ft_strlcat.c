@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 16:08:01 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/27 13:45:50 by boyola           ###   ########.fr       */
+/*   Created: 2020/02/27 10:38:08 by ikuklina          #+#    #+#             */
+/*   Updated: 2020/03/11 09:22:35 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Size-bounded string concatenation.
-** Returns the total length of the string they tried to create.
+** size-bounded string copying and concatinating
 */
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	j;
