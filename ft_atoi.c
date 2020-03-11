@@ -6,7 +6,7 @@
 /*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:44:24 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/11 12:38:11 by ikuklina         ###   ########.fr       */
+/*   Updated: 2020/03/11 12:41:37 by ikuklina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** convert ASCII string to integer
 */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int min;
 	int res;
