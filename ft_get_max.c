@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_get_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 14:23:04 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/28 16:11:38 by boyola           ###   ########.fr       */
+/*   Created: 2020/03/06 09:44:32 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 10:04:41 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the standard output followed by a ’\n’.
+** Returns bigger number.
 */
 
-void	ft_putendl(char const *s)
+float	ft_get_max(float a, float b)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
+	if (a > b)
+		return (a);
+	return (b);
 }

@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikuklina <ikuklina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:05:33 by ikuklina          #+#    #+#             */
-/*   Updated: 2020/03/05 16:53:47 by ikuklina         ###   ########.fr       */
+/*   Created: 2020/02/19 18:52:33 by boyola            #+#    #+#             */
+/*   Updated: 2020/02/25 21:04:45 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** alphanumeric character test
+** Alphanumeric character test.
 */
 
-int	ft_isalnum(int c)
+int		ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	return (0);
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

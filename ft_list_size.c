@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 14:23:04 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/28 16:11:38 by boyola           ###   ########.fr       */
+/*   Created: 2020/03/06 09:51:23 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 09:56:17 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the standard output followed by a ’\n’.
+** Returns the number of elements in the linked list that's
+** passed to it.
 */
 
-void	ft_putendl(char const *s)
+int	ft_list_size(t_list *begin_list)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
+	if (begin_list == 0)
+		return (0);
+	else
+		return (1 + ft_list_size(begin_list->next));
 }

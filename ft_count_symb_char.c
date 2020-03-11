@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_count_symb_char.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 14:23:04 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/28 16:11:38 by boyola           ###   ########.fr       */
+/*   Created: 2020/03/06 20:28:09 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 20:37:41 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the standard output followed by a ’\n’.
+** Counts total number of symbols and characters except char c.
 */
 
-void	ft_putendl(char const *s)
+int	ft_count_symb_char(char *s, char c)
 {
-	int	i;
+	int i;
+	int total;
 
 	i = 0;
-	while (s[i])
+	total = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
 	{
-		write(1, &s[i], 1);
-		i++;
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		while (s[i] != c && s[i] != '\0')
+		{
+			total++;
+			i++;
+		}
 	}
-	write(1, "\n", 1);
+	return (total);
 }

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_get_min.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boyola <boyola@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 14:23:04 by boyola            #+#    #+#             */
-/*   Updated: 2020/02/28 16:11:38 by boyola           ###   ########.fr       */
+/*   Created: 2020/03/06 09:48:27 by boyola            #+#    #+#             */
+/*   Updated: 2020/03/06 10:04:49 by boyola           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Outputs the string s to the standard output followed by a ’\n’.
+** Returns smaller number.
 */
 
-void	ft_putendl(char const *s)
+float	ft_get_min(float a, float b)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
+	if (a > b)
+		return (b);
+	return (a);
 }
